@@ -1,41 +1,26 @@
-# Flex Business Solutions Tech Test - Inventory Management
 
-In Flex Business Solutions, we aim to provide excellence and efficiency on all our lines of code in order to support the day-to-day activities of the company using our software solutions. In this task, you will be provided with a simple design of an app, fetching a list of products from an external source and allowing the user to search or filter among the list.
-
-
-### Tech Test Overview
-We have provided below the Figma link of this task. On the main page, we have a list of job sites with their corresponding status. By clicking the "Create" button we can create other job sites and add them to the list. By clicking to the jobsite name, we are redirected to the inventory dashboard for that particular job site. There, we can update items inside categories by double cliking on each cell where the content of that row will automatically be shown on the modal. Updating any specific column and hitting "Save", the content of the table should be automatically updated.
-
-[FIGMA] [https://www.figma.com/file/uOxY3AiUFaGuxsU9nk0H1O/ReactJs-Test?node-id=0%3A1]
-
-We love to see:
-- Functional code
-- Good design
-- Unit testing
-
-
-### Notes
-All of you work should take place inside this repository.
-
-You are free to use any packages that would help with this task
-
-You do not need to add additional security measures as part of this exercise.
-We're interested in how you break down the work and build your solution in a clean, easy-to-use, reusable and testable manner.
-
-
-## Deliverables
-You must follow the Figma design and need to add the functionality of:
-a) Create new job sites with their categories
-c) Search job sites & items on the inventory page
-b) Update items on each category
-
-**Create a folder inside the repository and include finished screenshots of the app.**
-**Please make sure to update the readme with**:
-
-- How to run your app with all the necessary details
-- Relating to the task please add answers to the following questions;
     1. How might you make this app more secure?
     2. How would you make this solution scale to millions of records?
   
 
-On completion email a link to your repository to your contact at FLEX BUSINESS SOLUTIONS and ensure it is publicly accessible.
+To enhance security and scale the app for millions of records, we need to consider both the backend (for security and data storage) and the frontend (for data management, performance, and scalability). 
+
+ 1. Making the App More Secure
+ **Authentication and Authorization**: Require users to log in and limit actions based on roles, e.g., only admins can delete job sites.
+ **Secure API Communication**: Use HTTPS to protect data in transit and prevent attacks.
+ **Data Validation and Sanitization**: Validate and sanitize all inputs to prevent SQL injection or XSS, both on the client and server sides.
+ **LocalStorage Security**: Avoid storing sensitive data like tokens in localStorage; using HttpOnly cookies instead.
+ **Session Management**: Ensure sessions expire after a set time and provide secure token handling.
+ **Error Handling**: Log server errors but avoid exposing sensitive details in client error messages.
+
+2.Scaling the Solution to Millions of Records
+**Backend Scalability** :
+- Database Optimization: Use indexes for frequently queried fields, and consider partitioning for large datasets.
+- Database Query Optimization: Optimize queries with efficient joins and pagination to reduce server load. 
+- Microservices: Break the app into microservices to scale different parts independently (e.g., job site, category, authentication). 
+**Frontend Scalability** 
+- Lazy Loading and Virtualization: Load only necessary data and use libraries like react-virtualized to render visible rows for better performance. 
+- Pagination and Infinite Scroll: Implement pagination or infinite scrolling to load small chunks of data at a time.
+- Efficient Search and Filtering: Perform search/filtering on the server with full-text search to speed up queries.
+
+  
