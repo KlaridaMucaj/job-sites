@@ -1,6 +1,11 @@
+1. How to run your app with all the necessary details
 
-    1. How might you make this app more secure?
-    2. How would you make this solution scale to millions of records?
+- In order to run this app firstly please consider cloning it.
+- Install npm through the terminal (npm install)
+- And run the app (npm start)
+
+2. How might you make this app more secure?
+3. How would you make this solution scale to millions of records?
   
 
 To enhance security and scale the app for millions of records, we need to consider both the backend (for security and data storage) and the frontend (for data management, performance, and scalability). 
